@@ -11,7 +11,7 @@ class Harvey_Bot {
 		$address_endings = array('alley','aly','annex','anex','anx','arcade','arc','avenue','ave','bayou','byu','boulevard','blvd','branch','br','bridge','brg','brook','brk','center','ctr','circle','cir','court','ct','drive','dr','expressway','expy','fld','flts','frge','freeway','fwy','gtwy','highway','hwy','lane','ln','lodge','ldg','manor','mnr','meadow','mdw','mdws','park','pkwy','parkway','place','pl','plaza','plz','road','rd','route','rte','skyway','skwy','street','st','terrace','ter','trafficway','trfy','way');
 		$address_started = 0;
 		for ($i = sizeof($text) - 1; $i >= 0; $i--) { 
-			$word = preg_replace("/[^a-zA-Z 0-9]+/", "", $text[$i]);
+			$word = preg_replace("/[^a-zA-Z 0-9]+/", "", strtolower($text[$i]));
 			switch ($address_started) {
 				case 0:
 					if (in_array($word, $address_endings)) {
