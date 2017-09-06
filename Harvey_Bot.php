@@ -1,9 +1,9 @@
 <?php
 class Harvey_Bot {
-	private $google_maps_api_key = 'AIzaSyACDJY9JCwE_3ksIY2Ny-aKdkte2xw5ruw';
+	private $google_maps_api_key = 'GOOGLE_MAPS_API_KEY_GOES_HERE';
 
 	public function connect() {
-		return mysqli_connect('localhost','root','','collegeh_houston');
+		return mysqli_connect('host','username','password','database');
 	}
 
 	public function search_for_address($text) {
